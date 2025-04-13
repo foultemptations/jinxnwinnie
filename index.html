@@ -67,33 +67,33 @@
     .cat-images a:hover img {
       transform: scale(1.05);
     }
+/* Pop-up image to appear on the left of Winnie image */
+.popup-image-left {
+  position: absolute;
+  top: 45%; /* Adjust this value to move the image higher or lower */
+  left: -350px; /* Start off-screen to the left */
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, left 0.3s ease;
+  z-index: 0;
+  max-width: none; /* Ensure the image displays at its natural size */
+  max-height: none; /* Ensure the image displays at its natural size */
+  object-fit: contain; /* Display the entire image without cropping */
+}
 
-    /* Pop-up image to appear on the left of Winnie image */
-    .popup-image-left {
-      position: absolute;
-      top: 50%;
-      left: -350px; /* Start off-screen to the left */
-      transform: translateY(-50%);
-      opacity: 0;
-      transition: opacity 0.3s ease, left 0.3s ease;
-      z-index: 0;
-      max-width: none; /* Adjust as needed */
-      max-height: none; /* Adjust as needed */
-      object-fit: contain;
-    }
+/* Pop-up image to appear on the right of Jinx image */
+.popup-image-right {
+  position: absolute;
+  top: 45%; /* Adjust this value to move the image higher or lower */
+  right: -350px; /* Start off-screen to the right */
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, right 0.3s ease;
+  z-index: 0;
+  max-width: none; /* Ensure the image displays at its natural size */
+  max-height: none; /* Ensure the image displays at its natural size */
+  object-fit: contain; /* Display the entire image without cropping */
 
-    /* Pop-up image to appear on the right of Jinx image */
-    .popup-image-right {
-      position: absolute;
-      top: 50%;
-      right: -350px; /* Start off-screen to the right */
-      transform: translateY(-50%);
-      opacity: 0;
-      transition: opacity 0.3s ease, right 0.3s ease;
-      z-index: 0;
-      max-width: none; /* Adjust as needed */
-      max-height: none; /* Adjust as needed */
-      object-fit: contain;
     }
 
     /* Show the image on hover over the first picture (Winnie) */
