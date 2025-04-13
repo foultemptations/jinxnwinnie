@@ -60,37 +60,6 @@
             object-fit: cover;
             border-radius: 10px;
             border: 2px solid #ccc;
-
-        }
-        .cat-images a {
-      position: relative;
-     /* Add arrows on the sides of images */
-        }
-    .cat-images a::before,
-    .cat-images a::after {
-      content: '⮌'; /* Funky arrow */
-      font-size: 100px;
-      color: #ff69b4; /* Pink arrow */
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    }
- 
-    /* Left arrow */
-    .cat-images a::before {
-      left: -100px; /* Adjust this to position the left arrow */
-    }
-
-    /* Right arrow */
-    .cat-images a::after {
-      right: -100px; /* Adjust this to position the right arrow */
-    }
-
-    /* Hover effect */
-    .cat-images a:hover::before,
-    .cat-images a:hover::after {
-      transform: translateY(-50%) scale(1.2); /* Grow the arrows when hovering */
     }
     
     .more-text {
