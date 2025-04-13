@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Winnie & Jinx</title>
+  
 
   <!-- Fonts -->
+    <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -51,17 +53,51 @@
             gap: 20px;
             margin: 20px;
             position: relative;
-            z-index: 2;
         }
-    
-               .cat-images img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid #ccc;
+     .cat-images img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      position: relative;
+      z-index: 1;
+               
     }
+ /* Pop-up image to appear on the left of Winnie image */
+    .popup-image-left {
+      position: absolute;
+      top: 50%;
+      left: -350px; /* Start off-screen to the left */
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease, left 0.3s ease;
+      z-index: 0;
+    }
+
+    /* Pop-up image to appear on the right of Jinx image */
+    .popup-image-right {
+      position: absolute;
+      top: 50%;
+      right: -350px; /* Start off-screen to the right */
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease, right 0.3s ease;
+      z-index: 0;
+    }
+
+    /* Show the image on hover over the first picture (Winnie) */
+    .cat-images a:hover .popup-image-left {
+      opacity: 1;
+      left: -400px; /* Move it to the left of the Winnie image */
+    }
+
+    /* Show the image on hover over the second picture (Jinx) */
+    .cat-images a:hover .popup-image-right {
+      opacity: 1;
+      right: -400px; /* Move it to the right of the Jinx image */
     
+    }
     .more-text {
       font-size: 40px;
       font-family: 'Winky Rough', cursive;
@@ -97,11 +133,13 @@
   <h1>Winnie & Jinx</h1>
   <p>Two devious little ladies who deserve their own website💕</p>
    <div class="cat-images">
-        <a href="jinx.html">
-            <img src="images/winnie1.jpg" alt="Winnie Cat">
-        </a>
         <a href="winnie.html">
+            <img src="images/winnie1.jpg" alt="Winnie Cat">
+          <img src="images/click-r.jpg" alt="Pop-up Image" class="popup-image"> <!-- Replace with your image -->
+        </a>
+        <a href="jinx.html">
             <img src="images/jinx1.jpg" alt="Jinx Cat">
+          <img src="images/click-l.jpg" alt="Pop-up Image" class="popup-image">
         </a>
     </div>
   <div class="more-text">
