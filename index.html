@@ -70,6 +70,7 @@
 /* Pop-up image to appear on the left of Winnie image */
 .popup-image-left {
   position: absolute;
+  border: none;
   top: 45%; /* Adjust this value to move the image higher or lower */
   left: -350px; /* Start off-screen to the left */
   transform: translateY(-50%);
@@ -78,15 +79,16 @@
   opacity: 0;
   transition: opacity 0.3s ease, left 0.3s ease;
   z-index: 0;
-  max-width: none; /* Ensure the image displays at its natural size */
-  max-height: none; /* Ensure the image displays at its natural size */
+  max-width: 400px; /* Ensure the image displays at its natural size */
+  max-height: 80px; /* Ensure the image displays at its natural size */
   object-fit: contain; /* Display the entire image without cropping */
 }
 
 /* Pop-up image to appear on the right of Jinx image */
 .popup-image-right {
   position: absolute;
-  top: 45%; /* Adjust this value to move the image higher or lower */
+  top: 45%;
+  border: none;/* Adjust this value to move the image higher or lower */
   right: -350px; /* Start off-screen to the right */
   transform: translateY(-50%);
   width: 500px;
